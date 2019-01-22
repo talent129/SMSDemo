@@ -5,6 +5,7 @@
 //  Created by mac on 17/5/17.
 //  Copyright © 2017年 cai. All rights reserved.
 //  http://sms.mob.com
+//  简书: https://www.jianshu.com/p/e54820c9b93c
 
 #import "ViewController.h"
 #import <SMS_SDK/SMSSDK.h>
