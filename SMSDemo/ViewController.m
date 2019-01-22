@@ -4,17 +4,18 @@
 //
 //  Created by mac on 17/5/17.
 //  Copyright © 2017年 cai. All rights reserved.
-//
+//  http://sms.mob.com
 
 #import "ViewController.h"
 #import <SMS_SDK/SMSSDK.h>
+#import "CountButton.h"
 
 #define Screen_Width [UIScreen mainScreen].bounds.size.width
 #define Screen_Height [UIScreen mainScreen].bounds.size.height
 
 @interface ViewController ()
 
-@property (nonatomic, strong) UIButton *getSMSBtn;
+@property (nonatomic, strong) CountButton *getSMSBtn;
 @property (nonatomic, strong) UIButton *submitSMSBtn;
 
 @property (nonatomic, strong) UILabel *phoneLabel;
@@ -28,10 +29,15 @@
 @implementation ViewController
 
 #pragma mark -懒加载
-- (UIButton *)getSMSBtn
+- (CountButton *)getSMSBtn
 {
     if (!_getSMSBtn) {
-        _getSMSBtn = [self createUIButtonWithTitle:@"获取验证码" withFrame:CGRectMake(15, 80, Screen_Width - 30, 50) withTitleColor:[UIColor purpleColor] withBackgroundColor:[UIColor cyanColor] withTarget:@selector(getSMSBtnAction)];
+        _getSMSBtn = [CountButton countdownButtonWith:@selector(getSMSBtnAction) withTarget:self];
+        _getSMSBtn.frame = CGRectMake(15, 80, Screen_Width - 30, 50);
+        _getSMSBtn.backgroundColor = [UIColor blueColor];
+        _getSMSBtn.titleLabel.font = [UIFont systemFontOfSize:16];
+        [_getSMSBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [_getSMSBtn setTitle:@"获取验证码" forState:UIControlStateNormal];
     }
     return _getSMSBtn;
 }
@@ -108,11 +114,13 @@
         return;
     }
     
+    __weak typeof(self) weakSelf = self;
     [SMSSDK getVerificationCodeByMethod:SMSGetCodeMethodSMS phoneNumber:self.phoneField.text zone:@"86" customIdentifier:nil result:^(NSError *error) {
         if (error) {
             NSLog(@"获取验证码失败: %@", error);
         }else {
             NSLog(@"发送成功");
+            [weakSelf.getSMSBtn startTime];
         }
     }];
 }

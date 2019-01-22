@@ -21,6 +21,7 @@
 		04A6C8A31ECBE016000B4644 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A6C8A21ECBE016000B4644 /* MessageUI.framework */; };
 		04A6C8A51ECBE01B000B4644 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A6C8A41ECBE01B000B4644 /* JavaScriptCore.framework */; };
 		04A6C8A71ECBE025000B4644 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A6C8A61ECBE025000B4644 /* libstdc++.tbd */; };
+		3406AEB421F718300066ADB7 /* CountButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3406AEB321F718300066ADB7 /* CountButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +44,8 @@
 		04A6C8A41ECBE01B000B4644 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		04A6C8A61ECBE025000B4644 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 		04A6C8A91ECBE114000B4644 /* SMSConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMSConfiguration.h; sourceTree = "<group>"; };
+		3406AEB221F718300066ADB7 /* CountButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CountButton.h; sourceTree = "<group>"; };
+		3406AEB321F718300066ADB7 /* CountButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CountButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +92,8 @@
 				04A6C8831ECBDF07000B4644 /* AppDelegate.m */,
 				04A6C8851ECBDF07000B4644 /* ViewController.h */,
 				04A6C8861ECBDF07000B4644 /* ViewController.m */,
+				3406AEB221F718300066ADB7 /* CountButton.h */,
+				3406AEB321F718300066ADB7 /* CountButton.m */,
 				04A6C8881ECBDF07000B4644 /* Main.storyboard */,
 				04A6C88B1ECBDF07000B4644 /* Assets.xcassets */,
 				04A6C88D1ECBDF07000B4644 /* LaunchScreen.storyboard */,
@@ -202,6 +207,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				04A6C8871ECBDF07000B4644 /* ViewController.m in Sources */,
+				3406AEB421F718300066ADB7 /* CountButton.m in Sources */,
 				04A6C8841ECBDF07000B4644 /* AppDelegate.m in Sources */,
 				04A6C8811ECBDF07000B4644 /* main.m in Sources */,
 			);
@@ -368,6 +374,7 @@
 				04A6C8951ECBDF07000B4644 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

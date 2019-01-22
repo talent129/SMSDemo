@@ -20,10 +20,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    
-    
     [SMSSDK registerApp:SMSAppKey withSecret:SMSAppSecret];
-    
     
     return YES;
 }
